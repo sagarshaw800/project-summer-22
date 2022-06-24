@@ -31,21 +31,6 @@ const Navbar = () => {
               OneStopCoding
             </Typography>
           </Box>
-
-          {/* //!Right Section */}
-
-          <Box sx={{
-            width:'320px',
-            display:'flex',
-            justifyContent:'space-evenly',
-            alignItems:'center',
-          }}>
-            {
-              ['Home', 'About', 'LogIn'].map((item)=>(
-                <Button sx={{color:'#eaf4f4', fontFamily: 'Chakra Petch'}} key={item}>{item}</Button>
-              ))
-            }
-          </Box>
         </Box>
       </AppBar>
     </>
