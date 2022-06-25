@@ -1,11 +1,12 @@
-import React from "react";
-import { Paper, Typography } from "@mui/material";
-const DsaNotes = () => {
+import { Paper, Typography } from '@mui/material'
+import React from 'react'
+
+const LogInPage = () => {
   return (
     <Paper
       sx={{
         width: "100vw",
-        paddingLeft:"320px",
+        paddingLeft:{xs:"10px", sm:"320px"},
         height: "90vh",
         backgroundColor: "#6c757d",
         backgroundColor: "transparent",
@@ -16,9 +17,9 @@ const DsaNotes = () => {
         overflowY: "scroll",
       }}
     >
-      <Typography variant="h3">Dsa Notes</Typography>
+      <Typography variant="h3">Log In page</Typography>
     </Paper>
-  );
-};
+  )
+}
 
-export default DsaNotes;
+export default LogInPage

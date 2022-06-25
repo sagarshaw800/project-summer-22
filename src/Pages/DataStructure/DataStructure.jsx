@@ -1,7 +1,7 @@
 import { Paper, Typography } from "@mui/material";
 import React from "react";
 
-const DsaSdeSheets = () => {
+const DataStructure = () => {
   return (
     <Paper
       sx={{
@@ -17,9 +17,9 @@ const DsaSdeSheets = () => {
         overflowY: "scroll",
       }}
     >
-      <Typography variant="h3">Dsa Sde Sheets</Typography>
+      <Typography variant="h3">Data Structure</Typography>
     </Paper>
   );
 };
 
-export default DsaSdeSheets;
+export default DataStructure;

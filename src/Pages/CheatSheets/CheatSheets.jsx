@@ -7,7 +7,7 @@ const CheatSheets = () => {
     <Paper
       sx={{
         width: "100vw",
-        paddingLeft:"320px",
+        paddingLeft:{xs:"10px", sm:"320px"},
         height: "90vh",
         backgroundColor: "#6c757d",
         backgroundColor: "transparent",
