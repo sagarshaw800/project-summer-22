@@ -8,7 +8,7 @@ const Algorithms = () => {
         width: "100vw",
         paddingLeft:{xs:"10px", sm:"320px"},
         height: "90vh",
-        backgroundColor: "#6c757d",
+        // backgroundColor: "#6c757d",
         backgroundColor: "transparent",
         position: "absolute",
         zIndex: -3,

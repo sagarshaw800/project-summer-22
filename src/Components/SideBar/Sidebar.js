@@ -1,7 +1,6 @@
 import {
   Box,
   Collapse,
-  Drawer,
   List,
   ListItemButton,
   ListItemIcon,
@@ -11,17 +10,17 @@ import {
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { sidebarDataContext } from "../../Context/SidebarDataContext";
 import { indexDataContext } from "../../Context/IndexDataContext";
-import { openDrawerDataContext } from "../../Context/OpenDrawerDataContext";
+// import { openDrawerDataContext } from "../../Context/OpenDrawerDataContext";
 import { styled } from "@mui/material/styles";
 const Sidebar = () => {
   const handleListItemClick1 = (event, index) => {
     setSelectedIndex(index);
   };
 
-  const { openDrawer, setOpenDrawer } = useContext(openDrawerDataContext);
+  // const { openDrawer, setOpenDrawer } = useContext(openDrawerDataContext);
   const { listItems, listItems2 } = useContext(sidebarDataContext);
   const { selectedIndex, setSelectedIndex } = useContext(indexDataContext);
 

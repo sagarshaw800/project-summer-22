@@ -10,11 +10,12 @@ import {
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { sidebarDataContext } from "../../Context/SidebarDataContext";
 import { indexDataContext } from "../../Context/IndexDataContext";
 import { openDrawerDataContext } from "../../Context/OpenDrawerDataContext";
 import { styled } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 
 const ResponsiveNavbar = () => {
   const handleListItemClick1 = (event, index) => {
@@ -35,9 +36,12 @@ const ResponsiveNavbar = () => {
     },
   });
 
+  const navigate = useNavigate();
+
   return (
     <Box sx={{ display: { xs: "block", sm: "block" } }}>
       <Drawer
+        variant={false ? "permanent" : "temporary"}
         open={openDrawer}
         onClose={() => setOpenDrawer(!openDrawer)}
         elevation={5}
@@ -56,6 +60,9 @@ const ResponsiveNavbar = () => {
               onClick={(event) => {
                 handleListItemClick1(event, item.id);
                 setOpenDrawer(!openDrawer);
+                navigate(item.text.split(" ").join("").toLowerCase(), {
+                  replace: true,
+                });
               }}
             >
               <ListItemIcon>{item.icon}</ListItemIcon>
@@ -73,7 +80,12 @@ const ResponsiveNavbar = () => {
               <ListItemButton
                 key={item.text}
                 selected={selectedIndex === item.id}
-                onClick={(event) => item.handleListItemClick(event, item.id)}
+                onClick={(event) => {
+                  item.handleListItemClick(event, item.id);
+                  navigate(item.text.split(" ").join("").toLowerCase(), {
+                    replace: true,
+                  });
+                }}
               >
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText
@@ -87,8 +99,12 @@ const ResponsiveNavbar = () => {
               </ListItemButton>
               {item.subTopics.map((topic) => (
                 <Collapse in={item.open} timeout="auto" unmountOnExit>
-                  <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4, paddingLeft: 6 }} key={topic}>
+                  <List disablePadding>
+                    <ListItemButton sx={{ paddingLeft: 6 }} key={topic} onClick={()=>{
+                      navigate(topic.split(" ").join(""), {
+                        replace: true,
+                      });
+                    }}>
                       <ListItemIcon>
                         <ArrowRightIcon />
                       </ListItemIcon>
