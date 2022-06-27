@@ -40,7 +40,6 @@ const ResponsiveNavbar = () => {
 
   return (
     <>
-    <Box sx={{ display: { xs: "none", md: "block" } }}>
       <Drawer
         variant="permanent"
         open={openDrawer}
@@ -50,6 +49,7 @@ const ResponsiveNavbar = () => {
           position: "absolute",
           zIndex: -1,
           overflowY: "scroll",
+          display: { xs: "none", md: "block" },
           [`& .MuiDrawer-paper`]: { width: "275px", bgcolor: "#6c757d" },
         }}
         ModalProps={{
@@ -104,11 +104,15 @@ const ResponsiveNavbar = () => {
               {item.subTopics.map((topic) => (
                 <Collapse in={item.open} timeout="auto" unmountOnExit>
                   <List disablePadding>
-                    <ListItemButton sx={{ paddingLeft: 6 }} key={topic} onClick={()=>{
-                      navigate(topic.split(" ").join(""), {
-                        replace: true,
-                      });
-                    }}>
+                    <ListItemButton
+                      sx={{ paddingLeft: 6 }}
+                      key={topic}
+                      onClick={() => {
+                        navigate(topic.split(" ").join(""), {
+                          replace: true,
+                        });
+                      }}
+                    >
                       <ListItemIcon>
                         <ArrowRightIcon />
                       </ListItemIcon>
@@ -127,14 +131,13 @@ const ResponsiveNavbar = () => {
           ))}
         </StyleWalaList>
       </Drawer>
-    </Box>
-    <Box sx={{ display: { xs: "block", md: "none" } }}>
       <Drawer
         variant="temporary"
         open={openDrawer}
         onClose={() => setOpenDrawer(!openDrawer)}
         elevation={5}
         sx={{
+          display: { xs: "block", md: "none" },
           position: "absolute",
           zIndex: -1,
           overflowY: "scroll",
@@ -192,11 +195,15 @@ const ResponsiveNavbar = () => {
               {item.subTopics.map((topic) => (
                 <Collapse in={item.open} timeout="auto" unmountOnExit>
                   <List disablePadding>
-                    <ListItemButton sx={{ paddingLeft: 6 }} key={topic} onClick={()=>{
-                      navigate(topic.split(" ").join(""), {
-                        replace: true,
-                      });
-                    }}>
+                    <ListItemButton
+                      sx={{ paddingLeft: 6 }}
+                      key={topic}
+                      onClick={() => {
+                        navigate(topic.split(" ").join(""), {
+                          replace: true,
+                        });
+                      }}
+                    >
                       <ListItemIcon>
                         <ArrowRightIcon />
                       </ListItemIcon>
@@ -215,7 +222,6 @@ const ResponsiveNavbar = () => {
           ))}
         </StyleWalaList>
       </Drawer>
-    </Box>
     </>
   );
 };
