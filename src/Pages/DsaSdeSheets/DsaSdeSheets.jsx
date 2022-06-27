@@ -9,7 +9,7 @@ const DsaSdeSheets = () => {
     <Paper
       sx={{
         width: "100vw",
-        paddingLeft:{xs:"0px", sm:"290px"},
+        paddingLeft:{xs:"0px", md:"290px"},
         height: "92vh",
         backgroundColor: "transparent",
         position: "absolute",

@@ -38,7 +38,7 @@ const Navbar = () => {
               OneStopCoding
             </Typography>
           </Box>
-          <Box sx={{ display: { xs: "block", sm: "block" } }}>
+          <Box sx={{ display: { xs: "block", md: "none" } }}>
             <IconButton
               sx={{ color: "white", marginRight: "20px" }}
               onClick={(e) => setOpenDrawer(!openDrawer)}

@@ -39,9 +39,10 @@ const ResponsiveNavbar = () => {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ display: { xs: "block", sm: "block" } }}>
+    <>
+    <Box sx={{ display: { xs: "none", md: "block" } }}>
       <Drawer
-        variant={false ? "permanent" : "temporary"}
+        variant="permanent"
         open={openDrawer}
         onClose={() => setOpenDrawer(!openDrawer)}
         elevation={5}
@@ -50,6 +51,9 @@ const ResponsiveNavbar = () => {
           zIndex: -1,
           overflowY: "scroll",
           [`& .MuiDrawer-paper`]: { width: "275px", bgcolor: "#6c757d" },
+        }}
+        ModalProps={{
+          keepMounted: true,
         }}
       >
         <StyleWalaList>
@@ -124,6 +128,95 @@ const ResponsiveNavbar = () => {
         </StyleWalaList>
       </Drawer>
     </Box>
+    <Box sx={{ display: { xs: "block", md: "none" } }}>
+      <Drawer
+        variant="temporary"
+        open={openDrawer}
+        onClose={() => setOpenDrawer(!openDrawer)}
+        elevation={5}
+        sx={{
+          position: "absolute",
+          zIndex: -1,
+          overflowY: "scroll",
+          [`& .MuiDrawer-paper`]: { width: "275px", bgcolor: "#6c757d" },
+        }}
+        ModalProps={{
+          keepMounted: true,
+        }}
+      >
+        <StyleWalaList>
+          {listItems.map((item) => (
+            <ListItemButton
+              key={item.text}
+              selected={selectedIndex === item.id}
+              onClick={(event) => {
+                handleListItemClick1(event, item.id);
+                setOpenDrawer(!openDrawer);
+                navigate(item.text.split(" ").join("").toLowerCase(), {
+                  replace: true,
+                });
+              }}
+            >
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText
+                primary={item.text}
+                primaryTypographyProps={{
+                  fontFamily: "Chakra Petch",
+                  fontSize: "0.8rem",
+                }}
+              />
+            </ListItemButton>
+          ))}
+          {listItems2.map((item) => (
+            <>
+              <ListItemButton
+                key={item.text}
+                selected={selectedIndex === item.id}
+                onClick={(event) => {
+                  item.handleListItemClick(event, item.id);
+                  navigate(item.text.split(" ").join("").toLowerCase(), {
+                    replace: true,
+                  });
+                }}
+              >
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText
+                  primary={item.text}
+                  primaryTypographyProps={{
+                    fontFamily: "Chakra Petch",
+                    fontSize: "0.8rem",
+                  }}
+                />
+                {item.open ? <ExpandLess /> : <ExpandMore />}
+              </ListItemButton>
+              {item.subTopics.map((topic) => (
+                <Collapse in={item.open} timeout="auto" unmountOnExit>
+                  <List disablePadding>
+                    <ListItemButton sx={{ paddingLeft: 6 }} key={topic} onClick={()=>{
+                      navigate(topic.split(" ").join(""), {
+                        replace: true,
+                      });
+                    }}>
+                      <ListItemIcon>
+                        <ArrowRightIcon />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={topic}
+                        primaryTypographyProps={{
+                          fontFamily: "Chakra Petch",
+                          fontSize: "0.8rem",
+                        }}
+                      />
+                    </ListItemButton>
+                  </List>
+                </Collapse>
+              ))}
+            </>
+          ))}
+        </StyleWalaList>
+      </Drawer>
+    </Box>
+    </>
   );
 };
 
