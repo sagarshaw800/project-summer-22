@@ -18,7 +18,7 @@ const DsaSdeSheets = () => {
       sx={{
         width: "100vw",
         paddingLeft: { xs: "0px", md: "290px" },
-        height: "100vh",
+        height: "92vh",
         backgroundColor: "transparent",
         position: "absolute",
         zIndex: -3,
