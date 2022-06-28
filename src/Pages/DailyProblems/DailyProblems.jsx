@@ -17,7 +17,7 @@ const DailyProblems = () => {
         zIndex: -3,
         right: 5,
         margin: "8px 2px",
-        overflowY: "scroll",
+        overflowY: "hidden",
       }}
     >
       <Paper
