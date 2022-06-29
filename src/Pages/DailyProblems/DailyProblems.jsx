@@ -59,9 +59,11 @@ const DailyProblems = () => {
                 borderRadius: "5px",
                 padding: "4px 10px",
                 marginTop:{xs:"15px",sm:"0px"},
+                color:"white",
+                ['&:hover']:{border:"1px solid #70e000", color:"#70e000"},
               }}>
               <Box>
-                <Typography color="white" sx={{ textAlign: "center" }}>
+                <Typography sx={{ textAlign: "center" }}>
                   {item.title}
                 </Typography>
               </Box>

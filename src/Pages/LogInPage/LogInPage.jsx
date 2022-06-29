@@ -9,7 +9,7 @@ const LogInPage = () => {
       sx={{
         width: "100vw",
         paddingLeft: { xs: "10px", md: "320px" },
-        height: "91vh",
+        height: "90vh",
         backgroundColor: "#fff",
         position: "absolute",
         zIndex: -3,
