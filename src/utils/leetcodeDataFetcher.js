@@ -41,12 +41,11 @@ export const leetcodeDataFetcher = async () => {
         // console.log(status);     
         const resdata=await res.json();
     
-        // console.log(resdata);
+        console.log(resdata);
         return (
-            [{link: resdata.data.activeDailyCodingChallengeQuestion.link,
+            {link: resdata.data.activeDailyCodingChallengeQuestion.link,
             title: resdata.data.activeDailyCodingChallengeQuestion.question.title,
             difficulty: resdata.data.activeDailyCodingChallengeQuestion.question.difficulty}
-            ]
         )
     }catch(err){
         console.log(err);
