@@ -47,7 +47,7 @@ const LearningResources = () => {
         {resources1.map((item) => (
           <Link
             underline="none"
-            sx={{ color: "black", fontFamily: "Chakra Petch" }}
+            sx={{ color: "black", fontFamily: "Chakra Petch", margin: "10px 20px", }}
             href={item.link}
             target="_blank"
           >
@@ -57,7 +57,6 @@ const LearningResources = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: "5px 10px",
-                margin: "10px 20px",
                 borderRadius: "200px",
               }}
             >
@@ -96,7 +95,7 @@ const LearningResources = () => {
         {resources2.map((item) => (
           <Link
             underline="none"
-            sx={{ color: "black", fontFamily: "Chakra Petch" }}
+            sx={{ color: "black", fontFamily: "Chakra Petch", margin: "10px 20px",}}
             href={item.link}
             target="_blank"
           >
@@ -106,7 +105,6 @@ const LearningResources = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: "5px 10px",
-                margin: "10px 20px",
                 borderRadius: "200px",
               }}
             >
@@ -145,7 +143,7 @@ const LearningResources = () => {
         {resources3.map((item) => (
           <Link
             underline="none"
-            sx={{ color: "black", fontFamily: "Chakra Petch" }}
+            sx={{ color: "black", fontFamily: "Chakra Petch", margin: "10px 20px", }}
             href={item.link}
             target="_blank"
           >
@@ -155,7 +153,6 @@ const LearningResources = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: "5px 10px",
-                margin: "10px 20px",
                 borderRadius: "200px",
               }}
             >
@@ -194,7 +191,7 @@ const LearningResources = () => {
         {resources4.map((item) => (
           <Link
             underline="none"
-            sx={{ color: "black", fontFamily: "Chakra Petch" }}
+            sx={{ color: "black", fontFamily: "Chakra Petch", margin: "10px 20px", }}
             href={item.link}
             target="_blank"
           >
@@ -204,7 +201,6 @@ const LearningResources = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: "5px 10px",
-                margin: "10px 20px",
                 borderRadius: "200px",
               }}
             >
