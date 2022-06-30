@@ -10,27 +10,30 @@ import DataStructure from "../../Pages/DataStructure/DataStructure";
 import Algorithms from "../../Pages/Algorithms/Algorithms";
 import DsaSdeSheetsContext from "../../Context/DsaSdeSheetContext";
 import PotdDataContext from "../../Context/PotdDataContext";
+import LearningResourcesContext from "../../Context/LearningResourcesContext";
 
 const PageHolder = () => {
   return (
-    <PotdDataContext>
-      <DsaSdeSheetsContext>
-        <Routes>
-          <Route path="home" element={<Home />} />
-          <Route path="login" element={<LogInPage />} />
-          <Route path="dailyproblems" element={<DailyProblems />} />
-          <Route path="dsasdesheets" element={<DsaSdeSheets />} />
-          <Route path="cheatsheets" element={<CheatSheets />} />
-          <Route path="learningresources" element={<LearningResources />} />
-          <Route path="datastructures" element={<DataStructure />}>
-            {/* <Route path="array" element={<Array />} />
+    <LearningResourcesContext>
+      <PotdDataContext>
+        <DsaSdeSheetsContext>
+          <Routes>
+            <Route path="home" element={<Home />} />
+            <Route path="login" element={<LogInPage />} />
+            <Route path="dailyproblems" element={<DailyProblems />} />
+            <Route path="dsasdesheets" element={<DsaSdeSheets />} />
+            <Route path="cheatsheets" element={<CheatSheets />} />
+            <Route path="learningresources" element={<LearningResources />} />
+            <Route path="datastructures" element={<DataStructure />}>
+              {/* <Route path="array" element={<Array />} />
           <Route path="string" element={<String />} /> */}
-          </Route>
-          <Route path="algorithms" element={<Algorithms />}></Route>
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </DsaSdeSheetsContext>
-    </PotdDataContext>
+            </Route>
+            <Route path="algorithms" element={<Algorithms />}></Route>
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </DsaSdeSheetsContext>
+      </PotdDataContext>
+    </LearningResourcesContext>
   );
 };
 
