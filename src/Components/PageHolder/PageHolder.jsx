@@ -11,6 +11,9 @@ import Algorithms from "../../Pages/Algorithms/Algorithms";
 import DsaSdeSheetsContext from "../../Context/DsaSdeSheetContext";
 import PotdDataContext from "../../Context/PotdDataContext";
 import LearningResourcesContext from "../../Context/LearningResourcesContext";
+import Html from "../../Pages/CheatSheets/Html/Html";
+import Css from "../../Pages/CheatSheets/Css/Css";
+import Javascript from "../../Pages/CheatSheets/Javascript/Javascript";
 
 const PageHolder = () => {
   return (
@@ -22,12 +25,14 @@ const PageHolder = () => {
             <Route path="login" element={<LogInPage />} />
             <Route path="dailyproblems" element={<DailyProblems />} />
             <Route path="dsasdesheets" element={<DsaSdeSheets />} />
-            <Route path="cheatsheets" element={<CheatSheets />} />
-            <Route path="learningresources" element={<LearningResources />} />
-            <Route path="datastructures" element={<DataStructure />}>
-              {/* <Route path="array" element={<Array />} />
-          <Route path="string" element={<String />} /> */}
+            <Route path="cheatsheets" element={<CheatSheets />} >
+              <Route index element={<Html/>}/>
+              <Route path="html" element={<Html/>}/>
+              <Route path="css" element={<Css/>}/>
+              <Route path="javascript" element={<Javascript/>}/>
             </Route>
+            <Route path="learningresources" element={<LearningResources />} />
+            <Route path="datastructures" element={<DataStructure />}></Route>
             <Route path="algorithms" element={<Algorithms />}></Route>
             <Route path="*" element={<Home />} />
           </Routes>

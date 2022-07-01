@@ -1,4 +1,3 @@
-import { Divider } from "@mui/material";
 import { Paper, Typography, Avatar, Box, Link } from "@mui/material";
 import React, { useContext } from "react";
 import { learningResourcesContext } from "../../Context/LearningResourcesContext";
