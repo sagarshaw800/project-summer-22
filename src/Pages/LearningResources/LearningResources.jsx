@@ -1,3 +1,4 @@
+import { Divider } from "@mui/material";
 import { Paper, Typography, Avatar, Box, Link } from "@mui/material";
 import React, { useContext } from "react";
 import { learningResourcesContext } from "../../Context/LearningResourcesContext";
@@ -36,29 +37,35 @@ const LearningResources = () => {
       >
         <Typography sx={{fontFamily: "Chakra Petch", color:'#70e000'}}>Academics</Typography>
       </Paper>
-
       <Box
         sx={{
           display: "flex",
           justifyContent: "flex-start",
           alignItems: "center",
           flexWrap: "wrap",
+          marginBottom:"40px"
         }}
       >
         {resources1.map((item) => (
           <Link
             underline="none"
-            sx={{ color: "black", fontFamily: "Chakra Petch", margin: "10px 20px", }}
+            sx={{fontFamily: "Chakra Petch", margin: "10px 20px",
+                width:"215px", fontSize:"0.86rem", 
+                }}
             href={item.link}
             target="_blank"
           >
             <Paper
               sx={{
+                color:"white",
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 alignItems: "center",
                 padding: "5px 10px",
                 borderRadius: "200px",
+                border: "1px solid #70e00088",
+                bgcolor:"transparent",
+                boxShadow:"0 0 2px black " 
               }}
             >
               <Avatar
@@ -91,22 +98,29 @@ const LearningResources = () => {
           justifyContent: "flex-start",
           alignItems: "center",
           flexWrap: "wrap",
+          marginBottom:"40px"
         }}
       >
         {resources2.map((item) => (
           <Link
             underline="none"
-            sx={{ color: "black", fontFamily: "Chakra Petch", margin: "10px 20px",}}
+            sx={{fontFamily: "Chakra Petch", margin: "10px 20px",
+            width:"215px", fontSize:"0.86rem", 
+            }}
             href={item.link}
             target="_blank"
           >
             <Paper
-              sx={{
+               sx={{
+                color:"white",
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 alignItems: "center",
                 padding: "5px 10px",
                 borderRadius: "200px",
+                border: "1px solid #70e00088",
+                bgcolor:"transparent",
+                boxShadow:"0 0 2px black " 
               }}
             >
               <Avatar
@@ -139,22 +153,29 @@ const LearningResources = () => {
           justifyContent: "flex-start",
           alignItems: "center",
           flexWrap: "wrap",
+          marginBottom:"40px"
         }}
       >
         {resources3.map((item) => (
           <Link
             underline="none"
-            sx={{ color: "black", fontFamily: "Chakra Petch", margin: "10px 20px", }}
+            sx={{fontFamily: "Chakra Petch", margin: "10px 20px",
+            width:"215px", fontSize:"0.86rem", 
+            }}
             href={item.link}
             target="_blank"
           >
             <Paper
-              sx={{
+               sx={{
+                color:"white",
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 alignItems: "center",
                 padding: "5px 10px",
                 borderRadius: "200px",
+                border: "1px solid #70e00088",
+                bgcolor:"transparent",
+                boxShadow:"0 0 2px black " 
               }}
             >
               <Avatar
@@ -187,23 +208,30 @@ const LearningResources = () => {
           justifyContent: "flex-start",
           alignItems: "center",
           flexWrap: "wrap",
+          marginBottom:"40px"
         }}
       >
         {resources4.map((item) => (
           <Link
             underline="none"
-            sx={{ color: "black", fontFamily: "Chakra Petch", margin: "10px 20px", }}
+            sx={{fontFamily: "Chakra Petch", margin: "10px 20px",
+                width:"215px", fontSize:"0.86rem", 
+                }}
             href={item.link}
             target="_blank"
           >
             <Paper
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "5px 10px",
-                borderRadius: "200px",
-              }}
+             sx={{
+              color:"white",
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              padding: "5px 10px",
+              borderRadius: "200px",
+              border: "1px solid #70e00088",
+              bgcolor:"transparent",
+              boxShadow:"0 0 2px black " 
+            }}
             >
               <Avatar
                 sx={{ bgcolor: "dodgerblue", marginRight: "10px" }}
