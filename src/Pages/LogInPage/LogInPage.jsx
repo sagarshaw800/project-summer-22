@@ -6,6 +6,7 @@ import logInPic from "../../assets/images/logIn/logInPic.jpg";
 const LogInPage = () => {
   return (
     <Paper
+    elevation={0}
       sx={{
         width: "100vw",
         paddingLeft: { xs: "10px", md: "320px" },

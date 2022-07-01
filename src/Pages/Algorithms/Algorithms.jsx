@@ -4,11 +4,11 @@ import React from 'react'
 const Algorithms = () => {
   return (
     <Paper
+    elevation={0}
       sx={{
         width: "100vw",
         paddingLeft:{xs:"10px", sm:"320px"},
         height: "90vh",
-        // backgroundColor: "#6c757d",
         backgroundColor: "transparent",
         position: "absolute",
         zIndex: -3,

@@ -5,12 +5,12 @@ const CheatSheets = () => {
 
   return (
     <Paper
+    elevation={0}
       sx={{
         width: "100vw",
         paddingLeft:{xs:"10px", sm:"320px"},
         height: "90vh",
-        backgroundColor: "#6c757d",
-        // backgroundColor: "transparent",
+        backgroundColor: "transparent",
         position: "absolute",
         zIndex: -3,
         right: 5,

@@ -15,14 +15,15 @@ const DsaSdeSheets = () => {
   const { DsaSdeSheetData } = useContext(dsaSdeSheetContext);
   return (
     <Paper
+    elevation={0}
       sx={{
         width: "100vw",
         paddingLeft: { xs: "0px", md: "290px" },
-        height: "92vh",
+        height: {xs:"94vh", md:'92vh'},
         backgroundColor: "transparent",
         position: "absolute",
         zIndex: -3,
-        // right: 5,
+        // right: 5, 
         // margin: "8px 2px",
         overflowY: "scroll",
         scrollbarWidth: "none",

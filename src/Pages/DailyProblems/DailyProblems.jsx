@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
-import { Paper, Typography, Box, Stack, Button, Link } from "@mui/material";
+import { Paper, Typography, Box, Stack, Link } from "@mui/material";
 import { potdDataContext } from "../../Context/PotdDataContext";
-import { styled } from "@mui/material/styles";
 
 const DailyProblems = () => {
   const { potdData } = useContext(potdDataContext);
 
   return (
     <Paper
+    elevation={0}
       sx={{
         width: "100vw",
         paddingLeft: { xs: "10px", md: "320px" },
@@ -47,7 +47,7 @@ const DailyProblems = () => {
             }}
           >
             <Paper sx={{ padding: "4px 8px 2px 8px" }}>
-              <img src={item.logo} height="25px" width="100px" />
+              <img src={item.logo} height="25px" width="100px" alt="logo"/>
             </Paper>
             <Link href={item.link}
               target="_blank"

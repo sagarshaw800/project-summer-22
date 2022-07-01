@@ -9,10 +9,11 @@ const LearningResources = () => {
 
   return (
     <Paper
+    elevation={0}
       sx={{
         width: "100vw",
         paddingLeft: { xs: "10px", md: "320px" },
-        height: "90vh",
+        height: {xs:"92vh", md:'90vh'},
         backgroundColor: "transparent",
         position: "absolute",
         zIndex: -3,
